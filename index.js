@@ -3,6 +3,8 @@ const app = express();
 const port = 3000;
 
 app.get('/api/calculate', (req, res) => {
+    res.header("Acess-Control-Allow-Origin" , "*");
+    res.header("Acess-Control-Allow-Headers" , "Origin, X-Requested-With, Content-Type, Accept");
     const num1 = parseFloat(req.query.num1);
     const num2 = parseFloat(req.query.num2);
     const operation = req.query.operation;
